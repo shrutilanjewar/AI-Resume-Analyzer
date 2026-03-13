@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Resume Analyzer</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#667eea,#764ba2);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.container{
+background:white;
+padding:30px;
+width:420px;
+border-radius:15px;
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+h1{
+color:#333;
+margin-bottom:10px;
+}
+
+.upload{
+border:2px dashed #667eea;
+padding:25px;
+border-radius:10px;
+margin-top:15px;
+}
+
+button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+background:#667eea;
+color:white;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#4b5bdc;
+}
+
+.result{
+margin-top:20px;
+text-align:left;
+}
+
+.bar{
+height:12px;
+background:#ddd;
+border-radius:10px;
+overflow:hidden;
+margin-top:5px;
+}
+
+.bar-fill{
+height:12px;
+width:85%;
+background:#4caf50;
+}
+
+.skills{
+background:#f3f3f3;
+padding:10px;
+border-radius:8px;
+margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>AI Resume Analyzer</h1>
+<p>Upload your resume and get AI based feedback</p>
+
+<div class="upload">
+<input type="file">
+</div>
+
+<button onclick="analyze()">Analyze Resume</button>
+
+<div class="result" id="result" style="display:none">
+
+<h3>Resume Score</h3>
+<div class="bar">
+<div class="bar-fill"></div>
+</div>
+<p>85 / 100</p>
+
+<h3>Skills Detected</h3>
+<div class="skills">
+Python, Java, SQL, HTML, CSS
+</div>
+
+<h3>Suggestions</h3>
+<ul>
+<li>Add more project descriptions</li>
+<li>Include certifications</li>
+<li>Improve resume formatting</li>
+</ul>
+
+</div>
+
+</div>
+
+<script>
+
+function analyze(){
+document.getElementById("result").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
